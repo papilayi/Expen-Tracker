@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import {uniqueId} from '../utils'
 
+// Creating a transaction form and what it entails
 function TransactionForm ({onNewTransaction}) {
     const [nameValue, setNameValue] = useState('');
     const [amountValue, setAmountValue] = useState('');
 
+    // adding a new transaction
     const addTransaction = (type, evt) => {
         evt.preventDefault();
 

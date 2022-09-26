@@ -4,12 +4,7 @@ import Expense from "./Expense";
 import TransactionHistory from "./TransactionHistory";
 import TransactionForm from "./TransactionForm";
 
-import { uniqueId } from "../utils";
-
-const transactionData = [
-   
-];
-
+// container components
 function ExpenseTracker () {
 
     const [income, setIncome] = useState(0);
@@ -38,13 +33,13 @@ function ExpenseTracker () {
         setIncome(income);
         setExpense(expense);
     }
-
+// Adding a new transaction
     const handleAddNewTransaction = item => {
         let newTransactions = [...transactions, item];
         setTransactions(newTransactions);
         console.log('new transactions:', newTransactions);
     }
-
+// Deleting a new transaction
     const handleDeleteTransaction = id => {
         const newTransactions = transactions.filter((item => item.id !=id));
         setTransactions(newTransactions);

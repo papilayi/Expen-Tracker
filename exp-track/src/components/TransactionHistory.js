@@ -1,5 +1,6 @@
 import React from "react";
 
+// Handling history and using the delete transaction option
 function TransactionHistory ({ transactions, onDeleteTransaction}) {
     return(
         <div>
